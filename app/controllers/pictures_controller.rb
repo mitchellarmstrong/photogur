@@ -1,22 +1,37 @@
 class PicturesController < ApplicationController
 
-	def index
-		#indexes all pictures from the database
-		@pictures = Picture.all
-	end
-
-	def show
-		#pulls single picture after searching the id number
-    	@picture = Picture.find[params[:id].to_i]
-	end
+  def index
+  	#displays all pictures in database Picture!
+    @pictures = Picture.all
+  end
 
 
-	def new
-	end
+  def show
+  	#displays single picture dictated by :id
+    @picture = Picture.find(params[:id])
+  end
 
-	def create
-    render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
-	end
 
+  def new
+  	@picture = Picture.new
+  end
+
+
+  def create
+
+    @picture = Picture.new(picture_params)
+
+    if @picture.save
+    	# if the save for the picture was successful, go to index.html.erb
+    	redirect_to pictures_url
+    else
+    	#otherwise render the view associated with action :new (i.e. new.html.erb
+    	render.new
+    end
+  end
+
+  def picture_params
+  	params.require(:picture).permit(:artist, :title, :url)
+  end
 
 end
