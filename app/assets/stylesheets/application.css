@@ -90,6 +90,7 @@ form {
 	font: 10pt sans-serif;
 	text-align: center;
 }
+
 #image-container .box {
 	border:5px solid #fff;
 	cursor: pointer;
@@ -104,9 +105,11 @@ form {
     box-shadow: 1px 1px 1px 1px #ccc;
 }
 
+
 #image-container .box .image {
 	position: absolute;
-	left: 0;
+	left: -150px;
+	top: -100px;
 	-webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
@@ -114,8 +117,8 @@ form {
     transition: all 300ms ease-out;
 }
 
-#image-container .box .pic-info {
-	background-color: rgba(78,78,78,0.7);
+.pic-info {
+	background-color: rgba(0,0,0,0.66);
     position: absolute;
     color: #fff;
     z-index: 100;
@@ -126,14 +129,44 @@ form {
     transition: all 300ms ease-out;
     left: 0;
     opacity: 0;
-    height: 182px;
     width: 200px;
+    height: 35px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+
 }
 
 #image-container .box .pic-info:hover {
-
-    opacity: 1;
+	opacity: 1;
 }
+
+#side-info {
+	width: 400px;
+	float:right;
+	clear: left;
+	font-family: sans-serif;
+}
+
+#side-info .side-title {
+	font-weight: bold;
+	padding-bottom: 3px;
+	border-bottom: 1px solid rgba(77,77,77,0.51);
+}
+
+#side-info .side-name {
+
+}
+#indiv-image{
+	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+	height: 640px;
+	width: 960px;
+
+}
+
+
 
 
 

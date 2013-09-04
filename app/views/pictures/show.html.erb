@@ -1,6 +1,14 @@
 
+<div id="side-info">
 
 
+<p class="side-title"><%= @picture[:title] %> </p>	<p class="side-name"> <%= @picture[:artist] %></p>
 
-<p><%= @picture[:title] %>, <%= @picture[:artist] %></p>
+</div>
+
+<div id="indiv-image">
 <%= image_tag @picture.url %>
+
+</div>
+
+
