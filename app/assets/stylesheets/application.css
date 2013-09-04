@@ -11,3 +11,136 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+	background-color: #ece8e5;
+}
+
+
+nav {
+	height: 40px;
+	width: 102%;
+	background-color: #455868;
+	font-size: 11pt;
+	font-family: sans-serif;
+	font-weight: bold;
+	position: fixed;
+	border-bottom: 2px solid rgba(25,27,28,0.5);
+	top: 0px;
+	left: -8px;
+	margin-bottom: 50px;
+	display: inline-block;
+
+}
+
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	height: 40px;
+}
+
+nav li {
+	display: inline;
+	float: left;
+	padding-left: 20px;
+	padding-right: -50px;
+
+}
+
+
+nav a {
+	color: #fff;
+	display: inline-block;
+	width: 100px;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: 1px 1px 0px #283744;
+}
+
+#title{
+	width: 80px;
+}
+
+nav a:hover {
+	color: #e8f6f7;
+	display: inline-block;
+	width: 100px;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: 1px 1px 0px #283744;
+}
+
+
+
+nav a#pull {
+    display: none;
+}
+
+form {
+
+	margin-top: 60px;
+	position: relative;
+	font-family: sans-serif;
+}
+
+
+#image-container {
+	height: auto;
+	margin-top: 50px;
+	font: 10pt sans-serif;
+	text-align: center;
+}
+#image-container .box {
+	border:5px solid #fff;
+	cursor: pointer;
+	height: 182px;
+	float: left;
+	margin: 5px;
+	position:relative;
+	overflow: hidden;
+	width: 200px;
+	 -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+    -moz-box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+#image-container .box .image {
+	position: absolute;
+	left: 0;
+	-webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+#image-container .box .pic-info {
+	background-color: rgba(78,78,78,0.7);
+    position: absolute;
+    color: #fff;
+    z-index: 100;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    left: 0;
+    opacity: 0;
+    height: 182px;
+    width: 200px;
+}
+
+#image-container .box .pic-info:hover {
+
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
