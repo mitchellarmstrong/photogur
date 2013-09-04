@@ -16,9 +16,11 @@ class PicturesController < ApplicationController
     @picture = Picture.new
   end
 
+
+
   def create
     # make a new picture with what picture_params returns (which is a method we're calling)
-    @picture = Picture.new(picture_params)
+    @picture = Picture.new(params[:picture])
 
     if @picture.save
       # if the save for the picture was successful, go to index.html.erb
@@ -29,13 +31,13 @@ class PicturesController < ApplicationController
     end
   end
 
-  def picture_params
-    params.require(:picture).permit(:artist, :title, :url)
-  end
+
 
   def edit
   	@picture = Picture.find(params[:id])
   end
+
+
 
   def update
   	@picture = Picture.find(params[:id])
@@ -45,6 +47,12 @@ class PicturesController < ApplicationController
   	else
   		render :edit
   	end
+  end
+
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to pictures_url
   end
 
 
