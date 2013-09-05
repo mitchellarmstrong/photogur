@@ -30,6 +30,7 @@ nav {
 	left: -8px;
 	margin-bottom: 50px;
 	display: inline-block;
+	z-index: 100;
 
 }
 
@@ -42,7 +43,7 @@ nav ul {
 nav li {
 	display: inline;
 	float: left;
-	padding-left: 20px;
+	padding-left: 30px;
 	padding-right: -50px;
 
 }
@@ -59,15 +60,16 @@ nav a {
 
 #title{
 	width: 80px;
+
 }
 
 #edit {
 	position: fixed;
-	left: 300px;
+	left: 320px;
 }
 
 nav a:hover {
-	color: #e8f6f7;
+	color: #f0f0f0;
 	display: inline-block;
 	width: 100px;
 	text-decoration: none;
@@ -84,17 +86,18 @@ nav a#pull {
 form {
 
 	margin-top: 60px;
-	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 	font-family: sans-serif;
-	left: 350px;
 
 }
 
 form ul {
-	width: 750px;
+	width: 600px;
 	list-style-type: none;
 	list-style-position: outside;
-	margin: 0px;
+
 	padding: 0px;
 }
 
@@ -145,6 +148,11 @@ form input{
 	margin-top: 50px;
 	font: 10pt sans-serif;
 	text-align: center;
+	z-index: 1;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+
 }
 
 #image-container .box {
@@ -160,6 +168,7 @@ form input{
     -moz-box-shadow: 1px 1px 1px 1px #ccc;
     box-shadow: 1px 1px 1px 1px #ccc;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -199,19 +208,21 @@ form input{
 }
 
 #side-info {
-	width: 400px;
+	width: 450px;
 	float:right;
 	clear: left;
 	font-family: sans-serif;
-	position:absolute;
-	left: 1000px;
+	position:static;
+	left: 900px;
 }
 
 #side-info .side-title {
 	font-weight: bold;
-	padding-bottom: 3px;
+	font-size: 24px;
+	padding-bottom: 8px;
 	border-bottom: 1px solid rgba(77,77,77,0.51);
 	left: -20px;
+	width: 400px;
 }
 
 #side-info .side-name {
@@ -226,6 +237,7 @@ form input{
 	width: 960px;
 
 }
+
 
 
 
